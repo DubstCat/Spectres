@@ -8,3 +8,4 @@ C:\Users\Ярослав\source\repos\Spectres\obj\Debug\Spectres.csproj.Generate
 C:\Users\Ярослав\source\repos\Spectres\obj\Debug\Spectres.csproj.CoreCompileInputs.cache
 C:\Users\Ярослав\source\repos\Spectres\obj\Debug\Spectres.exe
 C:\Users\Ярослав\source\repos\Spectres\obj\Debug\Spectres.pdb
+C:\Users\Ярослав\source\repos\Spectres\obj\Debug\Spectres.FormRazdel1.resources

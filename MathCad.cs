@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Numerics;
 
 namespace Spectres
 {
@@ -43,12 +44,7 @@ namespace Spectres
         {
             T1 = tau;
 
-            t = new List<double>();
-
-            for (double tValue = -T1; tValue <= T1; tValue += 0.001 * T1)
-            {
-                t.Add(tValue);
-            }
+            reinitializeT();
 
             List<FunctionPoint> result = new List<FunctionPoint>();
 
@@ -105,12 +101,7 @@ namespace Spectres
         {
             T1 = tau;
 
-            t = new List<double>();
-
-            for (double tValue = -T1; tValue <= T1; tValue += 0.001 * T1)
-            {
-                t.Add(tValue);
-            }
+            reinitializeT();
 
             List<FunctionPoint> result = new List<FunctionPoint>();
 
@@ -121,14 +112,29 @@ namespace Spectres
             return result;
         }
 
-
+        
         private double E1(double fParam, int MParam)
         {
             return Math.Abs(S1(fParam, MParam));
         }
 
+        public List<FunctionPoint> razdel1O1(int MParam)
+        {
+            List<FunctionPoint> result = new List<FunctionPoint>();
+
+            foreach (double fElement in f)
+            {
+                result.Add(new FunctionPoint(O1(fElement, MParam), fElement));
+            }
+            return result;
+        }
+
         private double O1(double fParam, int MParam)
         {
+            if(S1(fParam, MParam) < 0) 
+            {
+                return Math.PI;
+            }
             return 0;
         }
 
@@ -165,6 +171,17 @@ namespace Spectres
             }
             return summ;
         }
-       
+
+        void reinitializeT()
+        {
+            t = new List<double>();
+
+            for (double tValue = -T1; tValue <= T1; tValue += 0.001 * T1)
+            {
+                t.Add(tValue);
+            }
+        }
+
+
     }
 }

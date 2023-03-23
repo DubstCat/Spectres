@@ -60,9 +60,12 @@ namespace Spectres
         {
 
         }
-
         private void btnTest_Click(object sender, EventArgs e)
         {
+            var formRazdel1 = new FormRazdel1(mathCad, M);
+            formRazdel1.Activate();
+            formRazdel1.Show();
+            
             List<FunctionPoint> grafik = mathCad.razdel2U2(6);
 
             foreach(FunctionPoint point in grafik)
