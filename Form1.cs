@@ -60,5 +60,15 @@ namespace Spectres
         {
 
         }
+
+        private void btnTest_Click(object sender, EventArgs e)
+        {
+            List<FunctionPoint> grafik = mathCad.razdel2U2(6);
+
+            foreach(FunctionPoint point in grafik)
+            {
+                this.chart2.Series[0].Points.AddXY(point.y, point.x);
+            }
+        }
     }
 }

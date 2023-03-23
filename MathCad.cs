@@ -13,6 +13,9 @@ namespace Spectres
         private double T1;
         private List<double> t;
         private List<double> f0;
+        private double T;
+        private int N = 0;
+
 
         public MathCad()
         {
@@ -24,8 +27,21 @@ namespace Spectres
                 f.Add(fValue);
             }
 
-            T1 = tau;
 
+
+            f0 = new List<double>();
+            foreach (int element in M)
+            {
+                f0.Add(element / (4 * tau));
+            }
+
+            T = 5 * tau;
+        }
+
+        // U1 из раздела 1
+        public List<FunctionPoint> razdel1U1(int MParam)
+        {
+            T1 = tau;
 
             t = new List<double>();
 
@@ -34,17 +50,6 @@ namespace Spectres
                 t.Add(tValue);
             }
 
-
-            f0 = new List<double>();
-            foreach (int element in M)
-            {
-                f0.Add(element / (4 * tau));
-            }
-        }
-
-        // U1 из раздела 1
-        public List<FunctionPoint> razdel1U1(int MParam)
-        {
             List<FunctionPoint> result = new List<FunctionPoint>();
 
             foreach(double tElement in t)
@@ -98,6 +103,15 @@ namespace Spectres
 
         public List<FunctionPoint> razdel1E1(int MParam)
         {
+            T1 = tau;
+
+            t = new List<double>();
+
+            for (double tValue = -T1; tValue <= T1; tValue += 0.001 * T1)
+            {
+                t.Add(tValue);
+            }
+
             List<FunctionPoint> result = new List<FunctionPoint>();
 
             foreach (double fElement in f)
@@ -118,5 +132,39 @@ namespace Spectres
             return 0;
         }
 
+        //////////////////////////////////////////
+        // Сюда вставить ещё одну функцию из 1 раздела
+        //////////////////////////////////////////
+        ///
+
+        public List<FunctionPoint> razdel2U2(int MParam)
+        {
+            T1 = (N + 1) * T;
+
+            t = new List<double>();
+
+            for (double tValue = -T1; tValue <= T1; tValue += 0.001 * T1)
+            {
+                t.Add(tValue);
+            }
+
+            List<FunctionPoint> result = new List<FunctionPoint>();
+            foreach (double tElement in t)
+            {
+                result.Add(new FunctionPoint(U2(tElement, MParam), tElement));
+            }
+            return result;
+        }
+
+        private double U2(double tParam, int MParam)
+        {
+            double summ = 0;
+            for (int n = -N; n <= N; n++)
+            {
+                summ += U1(tParam - n * T, MParam);
+            }
+            return summ;
+        }
+       
     }
 }

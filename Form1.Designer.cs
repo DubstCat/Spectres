@@ -43,6 +43,7 @@ namespace Spectres
             this.btnRazdel1 = new System.Windows.Forms.Button();
             this.btnRazdel2 = new System.Windows.Forms.Button();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.btnTest = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             this.SuspendLayout();
@@ -123,11 +124,22 @@ namespace Spectres
             this.chart2.TabIndex = 3;
             this.chart2.Text = "chart2";
             // 
+            // btnTest
+            // 
+            this.btnTest.Location = new System.Drawing.Point(703, 448);
+            this.btnTest.Name = "btnTest";
+            this.btnTest.Size = new System.Drawing.Size(92, 23);
+            this.btnTest.TabIndex = 4;
+            this.btnTest.Text = "Test";
+            this.btnTest.UseVisualStyleBackColor = true;
+            this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1639, 498);
+            this.Controls.Add(this.btnTest);
             this.Controls.Add(this.chart2);
             this.Controls.Add(this.btnRazdel2);
             this.Controls.Add(this.btnRazdel1);
@@ -146,6 +158,7 @@ namespace Spectres
         private System.Windows.Forms.Button btnRazdel1;
         private System.Windows.Forms.Button btnRazdel2;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
+        private System.Windows.Forms.Button btnTest;
     }
 }
 
