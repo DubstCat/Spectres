@@ -56,10 +56,6 @@ namespace Spectres
             }
         }
 
-        private void drawFunction()
-        {
-
-        }
         private void btnTest_Click(object sender, EventArgs e)
         {
             var formRazdel1 = new FormRazdel1(mathCad, M);
