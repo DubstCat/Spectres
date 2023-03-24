@@ -189,6 +189,26 @@ namespace Spectres
             return Math.Abs(S2(fParam, MParam));
         }
 
+        public List<FunctionPoint> razdel2O2(int MParam)
+        {
+            List<FunctionPoint> result = new List<FunctionPoint>();
+
+            foreach (double fElement in f)
+            {
+                result.Add(new FunctionPoint(O2(fElement, MParam), fElement));
+            }
+            return result;
+        }
+
+        private double O2(double fParam, int MParam)
+        {
+            if (S2(fParam, MParam) < 0)
+            {
+                return Math.PI;
+            }
+            return 0;
+        }
+
         void reinitializeT()
         {
             t = new List<double>();

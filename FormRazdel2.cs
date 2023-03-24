@@ -20,9 +20,13 @@ namespace Spectres
             // this.M = M;
             this.mathCad = mathCad;
             InitializeComponent();
-            int[] M2 = { 6 };
-            ChartDrawer.drawChart(this.chartU2, mathCad.razdel2U2, M2);
-            ChartDrawer.drawChart(this.chartE2, mathCad.razdel2E2, M2);
+            int[] M6 = { 6 };
+            int[] M0 = { 0 };
+
+            ChartDrawer.drawChart(this.chartU2, mathCad.razdel2U2, M6);
+            ChartDrawer.drawChart(this.chartE2, mathCad.razdel2E2, M6);
+            ChartDrawer.drawChart(this.chartO2, mathCad.razdel2O2, M0);
+
         }
     }
 }
