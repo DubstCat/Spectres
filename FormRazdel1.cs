@@ -26,5 +26,10 @@ namespace Spectres
             ChartDrawer.drawChart(this.chartO1, mathCad.razdel1O1, M);
 
         }
+
+        private void FormRazdel1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
