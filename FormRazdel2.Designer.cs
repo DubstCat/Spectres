@@ -32,8 +32,13 @@ namespace Spectres
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.chartU2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartE2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.chartU2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartE2)).BeginInit();
             this.SuspendLayout();
             // 
             // chartU2
@@ -53,15 +58,35 @@ namespace Spectres
             this.chartU2.TabIndex = 0;
             this.chartU2.Text = "chart1";
             // 
+            // chartE2
+            // 
+            chartArea2.Name = "ChartArea1";
+            this.chartE2.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartE2.Legends.Add(legend2);
+            this.chartE2.Location = new System.Drawing.Point(12, 318);
+            this.chartE2.Name = "chartE2";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Legend = "Legend1";
+            series2.Name = "E2(f, 6)";
+            this.chartE2.Series.Add(series2);
+            this.chartE2.Size = new System.Drawing.Size(776, 300);
+            this.chartE2.TabIndex = 1;
+            this.chartE2.Text = "chart1";
+            // 
             // FormRazdel2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(1293, 610);
+            this.Controls.Add(this.chartE2);
             this.Controls.Add(this.chartU2);
             this.Name = "FormRazdel2";
             this.Text = "FormRazdel2";
             ((System.ComponentModel.ISupportInitialize)(this.chartU2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartE2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -69,5 +94,6 @@ namespace Spectres
         #endregion
 
         private System.Windows.Forms.DataVisualization.Charting.Chart chartU2;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartE2;
     }
 }

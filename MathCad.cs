@@ -171,7 +171,7 @@ namespace Spectres
             {
                 summ += S1(fParam, MParam) * Math.Exp(2 * Math.PI * fParam * n * T);
             }
-            return 0;
+            return summ;
         }
 
         public List<FunctionPoint> razdel2E2(int MParam)
