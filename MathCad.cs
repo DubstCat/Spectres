@@ -39,7 +39,8 @@ namespace Spectres
             T = 5 * tau;
         }
 
-        // U1 из раздела 1
+        // Раздел 1
+
         public List<FunctionPoint> razdel1U1(int MParam)
         {
             T1 = tau;
@@ -66,7 +67,6 @@ namespace Spectres
             return result;
         }
 
-        // C1 из раздела 1
 
         private double C1(double fParam, int MParam)
         {
@@ -138,21 +138,13 @@ namespace Spectres
             return 0;
         }
 
-        //////////////////////////////////////////
-        // Сюда вставить ещё одну функцию из 1 раздела
-        //////////////////////////////////////////
-        ///
+        // 2 раздел
 
         public List<FunctionPoint> razdel2U2(int MParam)
         {
             T1 = (N + 1) * T;
 
-            t = new List<double>();
-
-            for (double tValue = -T1; tValue <= T1; tValue += 0.001 * T1)
-            {
-                t.Add(tValue);
-            }
+            reinitializeT();
 
             List<FunctionPoint> result = new List<FunctionPoint>();
             foreach (double tElement in t)
@@ -170,6 +162,31 @@ namespace Spectres
                 summ += U1(tParam - n * T, MParam);
             }
             return summ;
+        }
+
+        private double S2(double fParam, int MParam)
+        {
+            double summ = 0;
+            for (int n = -N; n <= N; n++)
+            {
+                summ += S1(fParam, MParam) * Math.Exp(2 * Math.PI * fParam * n * T);
+            }
+            return 0;
+        }
+
+        public List<FunctionPoint> razdel2E2(int MParam)
+        {
+            List<FunctionPoint> result = new List<FunctionPoint>();
+            foreach (double fElement in f)
+            {
+                result.Add(new FunctionPoint(E2(fElement, MParam), fElement));
+            }
+            return result;
+        }
+
+        private double E2(double fParam, int MParam)
+        {
+            return Math.Abs(S2(fParam, MParam));
         }
 
         void reinitializeT()
