@@ -26,7 +26,6 @@ namespace Spectres
             ChartDrawer.drawChart(this.chartU2, mathCad.razdel2U2, M6);
             ChartDrawer.drawChart(this.chartE2, mathCad.razdel2E2, M6);
             ChartDrawer.drawChart(this.chartO2, mathCad.razdel2O2, M0);
-
         }
     }
 }
