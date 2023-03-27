@@ -56,6 +56,7 @@ namespace Spectres
             this.chartU2.Legends.Add(legend1);
             this.chartU2.Location = new System.Drawing.Point(12, 12);
             this.chartU2.Name = "chartU2";
+            series1.BorderWidth = 3;
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series1.Legend = "Legend1";
@@ -75,6 +76,7 @@ namespace Spectres
             this.chartE2.Legends.Add(legend2);
             this.chartE2.Location = new System.Drawing.Point(12, 318);
             this.chartE2.Name = "chartE2";
+            series2.BorderWidth = 3;
             series2.ChartArea = "ChartArea1";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series2.Legend = "Legend1";
@@ -94,6 +96,7 @@ namespace Spectres
             this.chartO2.Legends.Add(legend3);
             this.chartO2.Location = new System.Drawing.Point(12, 633);
             this.chartO2.Name = "chartO2";
+            series3.BorderWidth = 3;
             series3.ChartArea = "ChartArea1";
             series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series3.Legend = "Legend1";
