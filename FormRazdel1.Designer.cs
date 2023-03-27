@@ -54,6 +54,8 @@ namespace Spectres
             // 
             // chartU1
             // 
+            this.chartU1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(254)))), ((int)(((byte)(129)))));
+            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(254)))), ((int)(((byte)(129)))));
             chartArea1.Name = "ChartArea1";
             this.chartU1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
@@ -81,6 +83,8 @@ namespace Spectres
             // 
             // chartE1
             // 
+            this.chartE1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(254)))), ((int)(((byte)(129)))));
+            chartArea2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(254)))), ((int)(((byte)(129)))));
             chartArea2.Name = "ChartArea1";
             this.chartE1.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
@@ -108,6 +112,8 @@ namespace Spectres
             // 
             // chartO1
             // 
+            this.chartO1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(254)))), ((int)(((byte)(129)))));
+            chartArea3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(254)))), ((int)(((byte)(129)))));
             chartArea3.Name = "ChartArea1";
             this.chartO1.ChartAreas.Add(chartArea3);
             legend3.Name = "Legend1";
@@ -138,6 +144,7 @@ namespace Spectres
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(254)))), ((int)(((byte)(129)))));
             this.ClientSize = new System.Drawing.Size(1754, 1055);
             this.Controls.Add(this.chartO1);
             this.Controls.Add(this.chartE1);
