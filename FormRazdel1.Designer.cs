@@ -132,8 +132,11 @@ namespace Spectres
             // chartO1
             // 
             this.chartO1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(254)))), ((int)(((byte)(129)))));
+            chartArea3.AxisX.MajorGrid.Interval = 400000D;
+            chartArea3.AxisX.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
             chartArea3.AxisX.Maximum = 4000000D;
             chartArea3.AxisX.Minimum = -4000000D;
+            chartArea3.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
             chartArea3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(254)))), ((int)(((byte)(129)))));
             chartArea3.Name = "ChartArea1";
             this.chartO1.ChartAreas.Add(chartArea3);
