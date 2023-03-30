@@ -55,6 +55,11 @@ namespace Spectres
             // chartU1
             // 
             this.chartU1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(254)))), ((int)(((byte)(129)))));
+            chartArea1.AxisX.MajorGrid.Interval = 2E-07D;
+            chartArea1.AxisX.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
+            chartArea1.AxisX.Maximum = 2E-06D;
+            chartArea1.AxisX.Minimum = -2E-06D;
+            chartArea1.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
             chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(254)))), ((int)(((byte)(129)))));
             chartArea1.Name = "ChartArea1";
             this.chartU1.ChartAreas.Add(chartArea1);
@@ -90,6 +95,11 @@ namespace Spectres
             // chartE1
             // 
             this.chartE1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(254)))), ((int)(((byte)(129)))));
+            chartArea2.AxisX.MajorGrid.Interval = 400000D;
+            chartArea2.AxisX.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
+            chartArea2.AxisX.Maximum = 4000000D;
+            chartArea2.AxisX.Minimum = -4000000D;
+            chartArea2.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
             chartArea2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(254)))), ((int)(((byte)(129)))));
             chartArea2.Name = "ChartArea1";
             this.chartE1.ChartAreas.Add(chartArea2);
@@ -101,17 +111,17 @@ namespace Spectres
             series4.ChartArea = "ChartArea1";
             series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series4.Legend = "Legend1";
-            series4.Name = "E1(t, 1)";
+            series4.Name = "E1(f, 0)";
             series5.BorderWidth = 3;
             series5.ChartArea = "ChartArea1";
             series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series5.Legend = "Legend1";
-            series5.Name = "E1(t, 2)";
+            series5.Name = "E1(f, 1)";
             series6.BorderWidth = 3;
             series6.ChartArea = "ChartArea1";
             series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series6.Legend = "Legend1";
-            series6.Name = "E1(t, 0)";
+            series6.Name = "E1(f, 2)";
             this.chartE1.Series.Add(series4);
             this.chartE1.Series.Add(series5);
             this.chartE1.Series.Add(series6);
@@ -122,6 +132,8 @@ namespace Spectres
             // chartO1
             // 
             this.chartO1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(254)))), ((int)(((byte)(129)))));
+            chartArea3.AxisX.Maximum = 4000000D;
+            chartArea3.AxisX.Minimum = -4000000D;
             chartArea3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(254)))), ((int)(((byte)(129)))));
             chartArea3.Name = "ChartArea1";
             this.chartO1.ChartAreas.Add(chartArea3);
@@ -133,17 +145,17 @@ namespace Spectres
             series7.ChartArea = "ChartArea1";
             series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series7.Legend = "Legend1";
-            series7.Name = "O1(t, 0)";
+            series7.Name = "O1(f, 0)";
             series8.BorderWidth = 3;
             series8.ChartArea = "ChartArea1";
             series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series8.Legend = "Legend1";
-            series8.Name = "O1(t, 1)";
+            series8.Name = "O1(f, 1)";
             series9.BorderWidth = 3;
             series9.ChartArea = "ChartArea1";
             series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series9.Legend = "Legend1";
-            series9.Name = "O1(t, 2)";
+            series9.Name = "O1(f, 2)";
             this.chartO1.Series.Add(series7);
             this.chartO1.Series.Add(series8);
             this.chartO1.Series.Add(series9);
