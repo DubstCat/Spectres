@@ -43,8 +43,8 @@ namespace Spectres
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.tb2M = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.tb2M = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -191,13 +191,6 @@ namespace Spectres
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             // 
-            // tb2M
-            // 
-            this.tb2M.Location = new System.Drawing.Point(413, 81);
-            this.tb2M.Name = "tb2M";
-            this.tb2M.Size = new System.Drawing.Size(100, 22);
-            this.tb2M.TabIndex = 10;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -207,6 +200,14 @@ namespace Spectres
             this.label5.Size = new System.Drawing.Size(236, 25);
             this.label5.TabIndex = 14;
             this.label5.Text = "Значение параметра М:";
+            // 
+            // tb2M
+            // 
+            this.tb2M.Location = new System.Drawing.Point(413, 81);
+            this.tb2M.Name = "tb2M";
+            this.tb2M.Size = new System.Drawing.Size(100, 22);
+            this.tb2M.TabIndex = 10;
+            this.tb2M.Text = "0";
             // 
             // Form1
             // 

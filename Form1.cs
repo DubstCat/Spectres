@@ -24,7 +24,6 @@ namespace Spectres
         private void btnRazdel1_Click(object sender, EventArgs e)
         {
             if (!parameterMisCorrect()) return;
-           //M = { int.Parse(tb1M1.Text), int.Parse(tb1M2.Text), int.Parse(tb1M3.Text)};
             var formRazdel1 = new FormRazdel1(mathCad, M);
             formRazdel1.Activate();
             formRazdel1.Show();
@@ -32,9 +31,15 @@ namespace Spectres
 
         private void btnRazdel2_Click(object sender, EventArgs e)
         {
-            var formRazdel2 = new FormRazdel2(mathCad, new int[0]);
-            formRazdel2.Activate();
-            formRazdel2.Show();
+            int [] m = new int[1];
+            if (int.TryParse(tb2M.Text, out m[0])) {
+                var formRazdel2 = new FormRazdel2(mathCad, m);
+                formRazdel2.Activate();
+                formRazdel2.Show();
+            }
+            else {
+                MessageBox.Show("Проверьте введённые данные");
+            }
         }
 
         private bool parameterMisCorrect()

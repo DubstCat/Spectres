@@ -13,19 +13,19 @@ namespace Spectres
     public partial class FormRazdel2 : Form
     {
 
-        private int[] M;
         private MathCad mathCad;
         public FormRazdel2(MathCad mathCad, int[] M)
         {
-            // this.M = M;
             this.mathCad = mathCad;
             InitializeComponent();
-            int[] M6 = { 6 };
-            int[] M0 = { 0 };
+          
 
-            ChartDrawer.drawChart(this.chartU2, mathCad.razdel2U2, M6);
-            ChartDrawer.drawChart(this.chartE2, mathCad.razdel2E2, M6);
-            ChartDrawer.drawChart(this.chartO2, mathCad.razdel2O2, M0);
+            ChartDrawer.drawChart(this.chartU2, mathCad.razdel2U2, M);
+            chartU2.Series[0].Name = "U2(t," + M[0] + ")";
+            ChartDrawer.drawChart(this.chartE2, mathCad.razdel2E2, M);
+            chartE2.Series[0].Name = "E2(f," + M[0] + ")";
+            ChartDrawer.drawChart(this.chartO2, mathCad.razdel2O2, M);
+            chartO2.Series[0].Name = "O2(f," + M[0] + ")";
         }
     }
 }
