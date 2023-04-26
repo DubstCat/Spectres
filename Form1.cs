@@ -13,7 +13,7 @@ namespace Spectres
     public partial class Form1 : Form
     {
         private MathCad mathCad;
-        int[] M = {0, 1, 2};
+        int[] M = new int[3];
 
         public Form1()
         {
@@ -23,6 +23,8 @@ namespace Spectres
 
         private void btnRazdel1_Click(object sender, EventArgs e)
         {
+            if (!parameterMisCorrect()) return;
+           //M = { int.Parse(tb1M1.Text), int.Parse(tb1M2.Text), int.Parse(tb1M3.Text)};
             var formRazdel1 = new FormRazdel1(mathCad, M);
             formRazdel1.Activate();
             formRazdel1.Show();
@@ -30,14 +32,32 @@ namespace Spectres
 
         private void btnRazdel2_Click(object sender, EventArgs e)
         {
-            var formRazdel2 = new FormRazdel2(mathCad, M);
+            var formRazdel2 = new FormRazdel2(mathCad, new int[0]);
             formRazdel2.Activate();
             formRazdel2.Show();
+        }
+
+        private bool parameterMisCorrect()
+        {
+            if (
+                tb1M1.Text == tb1M2.Text || tb1M1.Text == tb1M3.Text || tb1M2.Text == tb1M3.Text
+                || !int.TryParse(tb1M1.Text, out M[0]) || !int.TryParse(tb1M2.Text, out M[1]) || !int.TryParse(tb1M3.Text, out M[2])
+                )
+            {
+                MessageBox.Show("Проверьте введённые данные");
+                return false;
+            }
+            return true;
         }
 
         private void btnTest_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

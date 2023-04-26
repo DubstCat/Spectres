@@ -32,31 +32,40 @@ namespace Spectres
             this.btnRazdel1 = new System.Windows.Forms.Button();
             this.btnRazdel2 = new System.Windows.Forms.Button();
             this.btnTest = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnTeor1 = new System.Windows.Forms.Button();
+            this.btnTeor2 = new System.Windows.Forms.Button();
+            this.tb1M1 = new System.Windows.Forms.TextBox();
+            this.tb1M2 = new System.Windows.Forms.TextBox();
+            this.tb1M3 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnRazdel1
             // 
-            this.btnRazdel1.Location = new System.Drawing.Point(52, 224);
+            this.btnRazdel1.Location = new System.Drawing.Point(377, 283);
             this.btnRazdel1.Name = "btnRazdel1";
-            this.btnRazdel1.Size = new System.Drawing.Size(92, 23);
+            this.btnRazdel1.Size = new System.Drawing.Size(130, 23);
             this.btnRazdel1.TabIndex = 1;
-            this.btnRazdel1.Text = "Раздел 1";
+            this.btnRazdel1.Text = "Моделировать";
             this.btnRazdel1.UseVisualStyleBackColor = true;
             this.btnRazdel1.Click += new System.EventHandler(this.btnRazdel1_Click);
             // 
             // btnRazdel2
             // 
-            this.btnRazdel2.Location = new System.Drawing.Point(615, 224);
+            this.btnRazdel2.Location = new System.Drawing.Point(1094, 176);
             this.btnRazdel2.Name = "btnRazdel2";
-            this.btnRazdel2.Size = new System.Drawing.Size(81, 23);
+            this.btnRazdel2.Size = new System.Drawing.Size(130, 23);
             this.btnRazdel2.TabIndex = 2;
-            this.btnRazdel2.Text = "Раздел 2";
+            this.btnRazdel2.Text = "Моделировать";
             this.btnRazdel2.UseVisualStyleBackColor = true;
             this.btnRazdel2.Click += new System.EventHandler(this.btnRazdel2_Click);
             // 
             // btnTest
             // 
-            this.btnTest.Location = new System.Drawing.Point(331, 224);
+            this.btnTest.Location = new System.Drawing.Point(634, 437);
             this.btnTest.Name = "btnTest";
             this.btnTest.Size = new System.Drawing.Size(92, 23);
             this.btnTest.TabIndex = 4;
@@ -64,17 +73,113 @@ namespace Spectres
             this.btnTest.UseVisualStyleBackColor = true;
             this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(1212, 32);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Лабораторная работа № 5. Трансформация спектров видеоимпульсов и радиоимпульсов.";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(13, 84);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(494, 25);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Раздел А - Расщепление спектров видеоимпульсов";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(723, 84);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(501, 50);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Раздел Б  Дискретно-непрерывная трансформация\r\n спектров видео- и радиоимпульсов";
+            // 
+            // btnTeor1
+            // 
+            this.btnTeor1.Location = new System.Drawing.Point(18, 125);
+            this.btnTeor1.Name = "btnTeor1";
+            this.btnTeor1.Size = new System.Drawing.Size(489, 32);
+            this.btnTeor1.TabIndex = 8;
+            this.btnTeor1.Text = "Теоретические данные";
+            this.btnTeor1.UseVisualStyleBackColor = true;
+            // 
+            // btnTeor2
+            // 
+            this.btnTeor2.Location = new System.Drawing.Point(728, 176);
+            this.btnTeor2.Name = "btnTeor2";
+            this.btnTeor2.Size = new System.Drawing.Size(208, 32);
+            this.btnTeor2.TabIndex = 9;
+            this.btnTeor2.Text = "Теоретические данные";
+            this.btnTeor2.UseVisualStyleBackColor = true;
+            // 
+            // tb1M1
+            // 
+            this.tb1M1.Location = new System.Drawing.Point(407, 183);
+            this.tb1M1.MaxLength = 5;
+            this.tb1M1.Name = "tb1M1";
+            this.tb1M1.Size = new System.Drawing.Size(100, 22);
+            this.tb1M1.TabIndex = 10;
+            this.tb1M1.Text = "0";
+            // 
+            // tb1M2
+            // 
+            this.tb1M2.Location = new System.Drawing.Point(407, 211);
+            this.tb1M2.MaxLength = 5;
+            this.tb1M2.Name = "tb1M2";
+            this.tb1M2.Size = new System.Drawing.Size(100, 22);
+            this.tb1M2.TabIndex = 11;
+            this.tb1M2.Text = "1";
+            // 
+            // tb1M3
+            // 
+            this.tb1M3.Location = new System.Drawing.Point(407, 239);
+            this.tb1M3.MaxLength = 5;
+            this.tb1M3.Name = "tb1M3";
+            this.tb1M3.Size = new System.Drawing.Size(100, 22);
+            this.tb1M3.TabIndex = 12;
+            this.tb1M3.Text = "2";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(13, 183);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(230, 25);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Значения параметра М";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1639, 498);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.tb1M3);
+            this.Controls.Add(this.tb1M2);
+            this.Controls.Add(this.tb1M1);
+            this.Controls.Add(this.btnTeor2);
+            this.Controls.Add(this.btnTeor1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnTest);
             this.Controls.Add(this.btnRazdel2);
             this.Controls.Add(this.btnRazdel1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -82,6 +187,15 @@ namespace Spectres
         private System.Windows.Forms.Button btnRazdel1;
         private System.Windows.Forms.Button btnRazdel2;
         private System.Windows.Forms.Button btnTest;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnTeor1;
+        private System.Windows.Forms.Button btnTeor2;
+        private System.Windows.Forms.TextBox tb1M1;
+        private System.Windows.Forms.TextBox tb1M2;
+        private System.Windows.Forms.TextBox tb1M3;
+        private System.Windows.Forms.Label label4;
     }
 }
 
