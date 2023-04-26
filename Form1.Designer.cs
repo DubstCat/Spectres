@@ -41,11 +41,15 @@ namespace Spectres
             this.tb1M2 = new System.Windows.Forms.TextBox();
             this.tb1M3 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnRazdel1
             // 
-            this.btnRazdel1.Location = new System.Drawing.Point(377, 283);
+            this.btnRazdel1.Location = new System.Drawing.Point(374, 245);
             this.btnRazdel1.Name = "btnRazdel1";
             this.btnRazdel1.Size = new System.Drawing.Size(130, 23);
             this.btnRazdel1.TabIndex = 1;
@@ -55,7 +59,7 @@ namespace Spectres
             // 
             // btnRazdel2
             // 
-            this.btnRazdel2.Location = new System.Drawing.Point(1094, 176);
+            this.btnRazdel2.Location = new System.Drawing.Point(333, 231);
             this.btnRazdel2.Name = "btnRazdel2";
             this.btnRazdel2.Size = new System.Drawing.Size(130, 23);
             this.btnRazdel2.TabIndex = 2;
@@ -65,7 +69,7 @@ namespace Spectres
             // 
             // btnTest
             // 
-            this.btnTest.Location = new System.Drawing.Point(634, 437);
+            this.btnTest.Location = new System.Drawing.Point(585, 277);
             this.btnTest.Name = "btnTest";
             this.btnTest.Size = new System.Drawing.Size(92, 23);
             this.btnTest.TabIndex = 4;
@@ -106,7 +110,7 @@ namespace Spectres
             // 
             // btnTeor1
             // 
-            this.btnTeor1.Location = new System.Drawing.Point(18, 125);
+            this.btnTeor1.Location = new System.Drawing.Point(15, 21);
             this.btnTeor1.Name = "btnTeor1";
             this.btnTeor1.Size = new System.Drawing.Size(489, 32);
             this.btnTeor1.TabIndex = 8;
@@ -115,16 +119,16 @@ namespace Spectres
             // 
             // btnTeor2
             // 
-            this.btnTeor2.Location = new System.Drawing.Point(728, 176);
+            this.btnTeor2.Location = new System.Drawing.Point(6, 21);
             this.btnTeor2.Name = "btnTeor2";
-            this.btnTeor2.Size = new System.Drawing.Size(208, 32);
+            this.btnTeor2.Size = new System.Drawing.Size(496, 32);
             this.btnTeor2.TabIndex = 9;
             this.btnTeor2.Text = "Теоретические данные";
             this.btnTeor2.UseVisualStyleBackColor = true;
             // 
             // tb1M1
             // 
-            this.tb1M1.Location = new System.Drawing.Point(407, 183);
+            this.tb1M1.Location = new System.Drawing.Point(404, 113);
             this.tb1M1.MaxLength = 5;
             this.tb1M1.Name = "tb1M1";
             this.tb1M1.Size = new System.Drawing.Size(100, 22);
@@ -133,7 +137,7 @@ namespace Spectres
             // 
             // tb1M2
             // 
-            this.tb1M2.Location = new System.Drawing.Point(407, 211);
+            this.tb1M2.Location = new System.Drawing.Point(404, 141);
             this.tb1M2.MaxLength = 5;
             this.tb1M2.Name = "tb1M2";
             this.tb1M2.Size = new System.Drawing.Size(100, 22);
@@ -142,7 +146,7 @@ namespace Spectres
             // 
             // tb1M3
             // 
-            this.tb1M3.Location = new System.Drawing.Point(407, 239);
+            this.tb1M3.Location = new System.Drawing.Point(404, 169);
             this.tb1M3.MaxLength = 5;
             this.tb1M3.Name = "tb1M3";
             this.tb1M3.Size = new System.Drawing.Size(100, 22);
@@ -153,31 +157,52 @@ namespace Spectres
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(13, 183);
+            this.label4.Location = new System.Drawing.Point(10, 113);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(230, 25);
             this.label4.TabIndex = 13;
             this.label4.Text = "Значения параметра М";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnRazdel1);
+            this.groupBox1.Controls.Add(this.btnTeor1);
+            this.groupBox1.Controls.Add(this.tb1M1);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.tb1M2);
+            this.groupBox1.Controls.Add(this.tb1M3);
+            this.groupBox1.Location = new System.Drawing.Point(18, 137);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(510, 321);
+            this.groupBox1.TabIndex = 14;
+            this.groupBox1.TabStop = false;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btnTeor2);
+            this.groupBox2.Controls.Add(this.btnRazdel2);
+            this.groupBox2.Location = new System.Drawing.Point(728, 137);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(549, 321);
+            this.groupBox2.TabIndex = 15;
+            this.groupBox2.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1639, 498);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.tb1M3);
-            this.Controls.Add(this.tb1M2);
-            this.Controls.Add(this.tb1M1);
-            this.Controls.Add(this.btnTeor2);
-            this.Controls.Add(this.btnTeor1);
+            this.ClientSize = new System.Drawing.Size(1294, 498);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnTest);
-            this.Controls.Add(this.btnRazdel2);
-            this.Controls.Add(this.btnRazdel1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -196,6 +221,8 @@ namespace Spectres
         private System.Windows.Forms.TextBox tb1M2;
         private System.Windows.Forms.TextBox tb1M3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }
 
