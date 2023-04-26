@@ -67,7 +67,7 @@ namespace Spectres
             series1.Legend = "Legend1";
             series1.Name = "U2(t, 6)";
             this.chartU2.Series.Add(series1);
-            this.chartU2.Size = new System.Drawing.Size(776, 300);
+            this.chartU2.Size = new System.Drawing.Size(1248, 300);
             this.chartU2.TabIndex = 0;
             this.chartU2.Text = "chart1";
             // 
@@ -92,7 +92,7 @@ namespace Spectres
             series2.Legend = "Legend1";
             series2.Name = "E2(f, 6)";
             this.chartE2.Series.Add(series2);
-            this.chartE2.Size = new System.Drawing.Size(776, 300);
+            this.chartE2.Size = new System.Drawing.Size(1248, 300);
             this.chartE2.TabIndex = 1;
             this.chartE2.Text = "chart1";
             // 
@@ -117,7 +117,7 @@ namespace Spectres
             series3.Legend = "Legend1";
             series3.Name = "O2(f, 0)";
             this.chartO2.Series.Add(series3);
-            this.chartO2.Size = new System.Drawing.Size(776, 300);
+            this.chartO2.Size = new System.Drawing.Size(1248, 300);
             this.chartO2.TabIndex = 2;
             this.chartO2.Text = "chart1";
             // 
