@@ -20,11 +20,11 @@ namespace Spectres
             InitializeComponent();
           
 
-            ChartDrawer.drawChart(this.chartU2, mathCad.razdel2U2, M);
+            ChartDrawer.drawChart(this.chartU2, mathCad.razdel2U2, M, 0);
             chartU2.Series[0].Name = "U2(t," + M[0] + ")";
-            ChartDrawer.drawChart(this.chartE2, mathCad.razdel2E2, M);
+            ChartDrawer.drawChart(this.chartE2, mathCad.razdel2E2, M, 0);
             chartE2.Series[0].Name = "E2(f," + M[0] + ")";
-            ChartDrawer.drawChart(this.chartO2, mathCad.razdel2O2, M);
+            ChartDrawer.drawChart(this.chartO2, mathCad.razdel2O2, M, 0);
             chartO2.Series[0].Name = "O2(f," + M[0] + ")";
         }
     }

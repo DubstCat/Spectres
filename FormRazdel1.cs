@@ -22,13 +22,13 @@ namespace Spectres
             this.mathCad = mathCad;
             InitializeComponent();
 
-            ChartDrawer.drawChart(this.chartU1, mathCad.razdel1U1, M);
+            ChartDrawer.drawChart(this.chartU1, mathCad.razdel1U1, M, 0);
             addCaption(chartU1, "U1", "t", M);
 
-            ChartDrawer.drawChart(this.chartE1, mathCad.razdel1E1, M);
+            ChartDrawer.drawChart(this.chartE1, mathCad.razdel1E1, M, 0);
             addCaption(chartE1, "E1", "f", M);
 
-            ChartDrawer.drawChart(this.chartO1, mathCad.razdel1O1, M);
+            ChartDrawer.drawChart(this.chartO1, mathCad.razdel1O1, M, 0);
             addCaption(chartO1, "O1", "f", M);
 
         }

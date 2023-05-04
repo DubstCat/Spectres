@@ -41,7 +41,7 @@ namespace Spectres
 
         // Раздел 1
 
-        public List<FunctionPoint> razdel1U1(int MParam)
+        public List<FunctionPoint> razdel1U1(int MParam, int N)
         {
             T1 = tau;
 
@@ -97,7 +97,7 @@ namespace Spectres
         }
 
 
-        public List<FunctionPoint> razdel1E1(int MParam)
+        public List<FunctionPoint> razdel1E1(int MParam, int NParam)
         {
             T1 = tau;
 
@@ -118,7 +118,7 @@ namespace Spectres
             return Math.Abs(S1(fParam, MParam));
         }
 
-        public List<FunctionPoint> razdel1O1(int MParam)
+        public List<FunctionPoint> razdel1O1(int MParam, int NParam)
         {
             List<FunctionPoint> result = new List<FunctionPoint>();
 
@@ -140,7 +140,7 @@ namespace Spectres
 
         // 2 раздел
 
-        public List<FunctionPoint> razdel2U2(int MParam)
+        public List<FunctionPoint> razdel2U2(int MParam, int NParam)
         {
             T1 = (N + 1) * T;
 
@@ -149,12 +149,12 @@ namespace Spectres
             List<FunctionPoint> result = new List<FunctionPoint>();
             foreach (double tElement in t)
             {
-                result.Add(new FunctionPoint(U2(tElement, MParam), tElement));
+                result.Add(new FunctionPoint(U2(tElement, MParam, NParam), tElement));
             }
             return result;
         }
 
-        private double U2(double tParam, int MParam)
+        private double U2(double tParam, int MParam, int NParam)
         {
             double summ = 0;
             for (int n = -N; n <= N; n++)
@@ -164,45 +164,45 @@ namespace Spectres
             return summ;
         }
 
-        private double S2(double fParam, int MParam)
+        private double S2(double fParam, int MParam, int NParam)
         {
             double summ = 0;
-            for (int n = -N; n <= N; n++)
+            for (int n = -NParam; n <= NParam; n++)
             {
                 summ += S1(fParam, MParam) * Math.Exp(2 * Math.PI * fParam * n * T);
             }
             return summ;
         }
 
-        public List<FunctionPoint> razdel2E2(int MParam)
+        public List<FunctionPoint> razdel2E2(int MParam, int NParam)
         {
             List<FunctionPoint> result = new List<FunctionPoint>();
             foreach (double fElement in f)
             {
-                result.Add(new FunctionPoint(E2(fElement, MParam), fElement));
+                result.Add(new FunctionPoint(E2(fElement, MParam, NParam), fElement));
             }
             return result;
         }
 
-        private double E2(double fParam, int MParam)
+        private double E2(double fParam, int MParam, int NParam)
         {
-            return Math.Abs(S2(fParam, MParam));
+            return Math.Abs(S2(fParam, MParam, NParam));
         }
 
-        public List<FunctionPoint> razdel2O2(int MParam)
+        public List<FunctionPoint> razdel2O2(int MParam, int NParam)
         {
             List<FunctionPoint> result = new List<FunctionPoint>();
 
             foreach (double fElement in f)
             {
-                result.Add(new FunctionPoint(O2(fElement, MParam), fElement));
+                result.Add(new FunctionPoint(O2(fElement, MParam, NParam), fElement));
             }
             return result;
         }
 
-        private double O2(double fParam, int MParam)
+        private double O2(double fParam, int MParam, int NParam)
         {
-            if (S2(fParam, MParam) < 0)
+            if (S2(fParam, MParam, NParam) < 0)
             {
                 return Math.PI;
             }
