@@ -45,6 +45,7 @@ namespace Spectres
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tb2M = new System.Windows.Forms.TextBox();
+            this.tb2N = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -181,6 +182,7 @@ namespace Spectres
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.tb2N);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.tb2M);
             this.groupBox2.Controls.Add(this.btnTeor2);
@@ -208,6 +210,14 @@ namespace Spectres
             this.tb2M.Size = new System.Drawing.Size(100, 22);
             this.tb2M.TabIndex = 10;
             this.tb2M.Text = "0";
+            // 
+            // tb2N
+            // 
+            this.tb2N.Location = new System.Drawing.Point(413, 109);
+            this.tb2N.Name = "tb2N";
+            this.tb2N.Size = new System.Drawing.Size(100, 22);
+            this.tb2N.TabIndex = 15;
+            this.tb2N.Text = "0";
             // 
             // Form1
             // 
@@ -248,6 +258,7 @@ namespace Spectres
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox tb2M;
+        private System.Windows.Forms.TextBox tb2N;
     }
 }
 

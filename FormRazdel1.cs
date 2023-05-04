@@ -16,7 +16,7 @@ namespace Spectres
         private int[] M;
         private MathCad mathCad;
 
-        public FormRazdel1(MathCad mathCad, int [] M)
+        public FormRazdel1(MathCad mathCad, int [] M, int N)
         {
             this.M = M;
             this.mathCad = mathCad;
