@@ -157,7 +157,7 @@ namespace Spectres
         private double U2(double tParam, int MParam, int NParam)
         {
             double summ = 0;
-            for (int n = -N; n <= N; n++)
+            for (int n = -NParam; n <= NParam; n++)
             {
                 summ += U1(tParam - n * T, MParam);
             }
