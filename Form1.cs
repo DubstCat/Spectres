@@ -27,7 +27,6 @@ namespace Spectres
         {
             if (!parametersAreCorrect()) return;
             var formRazdel1 = new FormRazdel1(mathCad, M, N);
-            formRazdel1.Activate();
             formRazdel1.Show();
         }
 
@@ -35,7 +34,6 @@ namespace Spectres
         {
             if (!parametersAreCorrect()) return;
             var formRazdel2 = new FormRazdel2(mathCad, new int[] { m }, N);
-            formRazdel2.Activate();
             formRazdel2.Show();
         }
 
@@ -43,7 +41,7 @@ namespace Spectres
         {
             if (
                 tb1M1.Text == tb1M2.Text || tb1M1.Text == tb1M3.Text || tb1M2.Text == tb1M3.Text
-                || !int.TryParse(tb1M1.Text, out M[0]) || !int.TryParse(tb1M2.Text, out M[1]) || !int.TryParse(tb1M3.Text, out M[2]) || !int.TryParse(tb2N.Text, out N)
+                || !int.TryParse(tb1M1.Text, out M[0]) || !int.TryParse(tb1M2.Text, out M[1]) || !int.TryParse(tb1M3.Text, out M[2]) || !int.TryParse(tb2M.Text, out m) || !int.TryParse(tb2N.Text, out N)
                 )
             {
                 MessageBox.Show("Проверьте введённые данные");
