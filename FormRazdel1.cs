@@ -48,51 +48,51 @@ namespace Spectres
 
         }
 
-        // U1
+        // Checkboxes
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-
+            chartU1.Series[0].Enabled = checkBoxU1_1.Checked;
         }
 
         private void checkBoxU1_2_CheckedChanged(object sender, EventArgs e)
         {
-
+            chartU1.Series[1].Enabled = checkBoxU1_2.Checked;
         }
 
         private void checkBoxU1_3_CheckedChanged(object sender, EventArgs e)
         {
-
+            chartU1.Series[2].Enabled = checkBoxU1_3.Checked;
         }
 
         private void checkBoxE1_1_CheckedChanged(object sender, EventArgs e)
         {
-
+            chartE1.Series[0].Enabled = checkBoxE1_1.Checked;
         }
 
         private void checkBoxE1_2_CheckedChanged(object sender, EventArgs e)
         {
-
+            chartE1.Series[1].Enabled = checkBoxE1_2.Checked;
         }
 
         private void checkBoxE1_3_CheckedChanged(object sender, EventArgs e)
         {
-
+            chartE1.Series[2].Enabled = checkBoxE1_3.Checked;
         }
 
         private void checkBoxO1_1_CheckedChanged(object sender, EventArgs e)
         {
-
+            chartO1.Series[0].Enabled = checkBoxO1_1.Checked;
         }
 
         private void checkBoxO1_2_CheckedChanged(object sender, EventArgs e)
         {
-
+            chartO1.Series[1].Enabled = checkBoxO1_2.Checked;
         }
 
         private void checkBoxO1_3_CheckedChanged(object sender, EventArgs e)
         {
-
+            chartO1.Series[2].Enabled = checkBoxO1_3.Checked;
         }
     }
 }
