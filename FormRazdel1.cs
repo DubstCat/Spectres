@@ -47,5 +47,52 @@ namespace Spectres
         {
 
         }
+
+        // U1
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxU1_2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxU1_3_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxE1_1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxE1_2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxE1_3_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxO1_1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxO1_2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxO1_3_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
