@@ -55,7 +55,7 @@ namespace Spectres
             chartArea1.AxisX.Minimum = -2E-05D;
             chartArea1.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
             chartArea1.AxisY.Maximum = 3D;
-            chartArea1.AxisY.Minimum = -1D;
+            chartArea1.AxisY.Minimum = -3D;
             chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(254)))), ((int)(((byte)(129)))));
             chartArea1.Name = "ChartArea1";
             this.chartU2.ChartAreas.Add(chartArea1);
