@@ -15,7 +15,7 @@ namespace Spectres
         private List<double> t;
         private List<double> f0;
         private double T;
-        private int N = 0;
+        // private int N = 0;
 
 
         public MathCad()
@@ -142,7 +142,7 @@ namespace Spectres
 
         public List<FunctionPoint> razdel2U2(int MParam, int NParam)
         {
-            T1 = (N + 1) * T;
+            T1 = (NParam + 1) * T;
 
             reinitializeT();
 
@@ -169,7 +169,8 @@ namespace Spectres
             double summ = 0;
             for (int n = -NParam; n <= NParam; n++)
             {
-                summ += S1(fParam, MParam) * Math.Exp(2 * Math.PI * fParam * n * T);
+                summ += S1(fParam, MParam); // *
+                   // Math.Exp(-2 * Math.PI * fParam * n * T);
             }
             return summ;
         }
@@ -218,7 +219,5 @@ namespace Spectres
                 t.Add(tValue);
             }
         }
-
-
     }
 }
