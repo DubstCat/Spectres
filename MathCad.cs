@@ -7,7 +7,7 @@ namespace Spectres
     public class MathCad {
         private int A = 2;
         private int K = 8;
-        private double tau = 2e-6;
+        public double tau = 2e-6;
         private double F;
         private int[] M = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 };
         private List<double> f;
