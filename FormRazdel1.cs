@@ -21,6 +21,32 @@ namespace Spectres
             this.M = M;
             this.mathCad = mathCad;
             InitializeComponent();
+            drawCharts();
+        }
+
+
+        private void drawCharts()
+        {
+            chartU1.Series[0].Points.Clear();
+            chartU1.Series[1].Points.Clear();
+            chartU1.Series[2].Points.Clear();
+            chartU1.Series[0].Name="";
+            chartU1.Series[1].Name = "1";
+            chartU1.Series[2].Name = "2";
+
+            chartE1.Series[0].Points.Clear();
+            chartE1.Series[1].Points.Clear();
+            chartE1.Series[2].Points.Clear();
+            chartE1.Series[0].Name = "";
+            chartE1.Series[1].Name = "1";
+            chartE1.Series[2].Name = "2";
+
+            chartO1.Series[0].Points.Clear();
+            chartO1.Series[1].Points.Clear();
+            chartO1.Series[2].Points.Clear();
+            chartO1.Series[0].Name = "";
+            chartO1.Series[1].Name = "1";
+            chartO1.Series[2].Name = "2";
 
             ChartDrawer.drawChart(this.chartU1, mathCad.razdel1U1, M, 0);
             addCaption(chartU1, "U1", "t", M);
@@ -31,6 +57,19 @@ namespace Spectres
             ChartDrawer.drawChart(this.chartO1, mathCad.razdel1O1, M, 0);
             addCaption(chartO1, "O1", "f", M);
 
+        }
+        private void increaseM()
+        {
+            M[0]+=3;
+            M[1]+=3;
+            M[2]+=3;
+        }
+
+        private void decreaseM()
+        {
+            M[0]-=3;
+            M[1]-=3;
+            M[2]-=3;
         }
 
         private void addCaption(Chart chart, string name, string parameter, int [] M)
@@ -93,6 +132,18 @@ namespace Spectres
         private void checkBoxO1_3_CheckedChanged(object sender, EventArgs e)
         {
             chartO1.Series[2].Enabled = checkBoxO1_3.Checked;
+        }
+
+        private void btnDecreaseM_Click(object sender, EventArgs e)
+        {
+            decreaseM();
+            drawCharts();
+        }
+
+        private void btnIncreaseM_Click(object sender, EventArgs e)
+        {
+            increaseM();
+            drawCharts();
         }
     }
 }

@@ -51,8 +51,6 @@ namespace Spectres
             this.chartU2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(254)))), ((int)(((byte)(129)))));
             chartArea1.AxisX.MajorGrid.Interval = 0D;
             chartArea1.AxisX.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
-            chartArea1.AxisX.Maximum = 3E-05D;
-            chartArea1.AxisX.Minimum = -2E-05D;
             chartArea1.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
             chartArea1.AxisY.Maximum = 3D;
             chartArea1.AxisY.Minimum = -3D;
@@ -78,7 +76,11 @@ namespace Spectres
             this.chartE2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(254)))), ((int)(((byte)(129)))));
             chartArea2.AxisX.MajorGrid.Interval = 800000D;
             chartArea2.AxisX.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
+            chartArea2.AxisX.Maximum = 4000000D;
+            chartArea2.AxisX.Minimum = -4000000D;
             chartArea2.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
+            chartArea2.AxisY.Maximum = 4E-05D;
+            chartArea2.AxisY.Minimum = 0D;
             chartArea2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(254)))), ((int)(((byte)(129)))));
             chartArea2.Name = "ChartArea1";
             this.chartE2.ChartAreas.Add(chartArea2);
@@ -104,6 +106,8 @@ namespace Spectres
             chartArea3.AxisX.Maximum = 4000000D;
             chartArea3.AxisX.Minimum = -4000000D;
             chartArea3.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
+            chartArea3.AxisY.Maximum = 3.5D;
+            chartArea3.AxisY.Minimum = -3.5D;
             chartArea3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(254)))), ((int)(((byte)(129)))));
             chartArea3.Name = "ChartArea1";
             this.chartO2.ChartAreas.Add(chartArea3);

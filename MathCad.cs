@@ -23,7 +23,7 @@ namespace Spectres
             F = K / tau;
             f = new List<double>();
 
-            for (double fValue = -F; fValue <= F; fValue += 0.001 * F)
+            for (double fValue = -F; fValue <= F; fValue += 0.0001 * F)
             {
                 f.Add(fValue);
             }
@@ -169,8 +169,7 @@ namespace Spectres
             double summ = 0;
             for (int n = -NParam; n <= NParam; n++)
             {
-                summ += S1(fParam, MParam); // *
-                   // Math.Exp(-2 * Math.PI * fParam * n * T);
+                summ += S1(fParam, MParam) * Math.Pow(0.99, (2 * fParam * n * T));
             }
             return summ;
         }
@@ -185,7 +184,7 @@ namespace Spectres
             return result;
         }
 
-        private double E2(double fParam, int MParam, int NParam)
+        public double E2(double fParam, int MParam, int NParam)
         {
             return Math.Abs(S2(fParam, MParam, NParam));
         }
