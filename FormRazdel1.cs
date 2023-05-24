@@ -41,12 +41,25 @@ namespace Spectres
             chartO1.Series[1].Name = "1";
             chartO1.Series[2].Name = "2";
 
+
+            chartU1.ChartAreas[0].AxisX.Interval = mathCad.tau / 5;
+            chartU1.ChartAreas[0].AxisX.MajorGrid.Interval = mathCad.tau / 5;
+            chartE1.ChartAreas[0].AxisX.Minimum = -mathCad.tau;
+            chartE1.ChartAreas[0].AxisX.Maximum = mathCad.tau;
             ChartDrawer.drawChart(this.chartU1, mathCad.razdel1U1, M, 0);
             addCaption(chartU1, "U1", "t", M);
 
+            chartE1.ChartAreas[0].AxisX.Minimum = -8/mathCad.tau;
+            chartE1.ChartAreas[0].AxisX.Maximum = 8/mathCad.tau;
+            chartE1.ChartAreas[0].AxisX.Interval = 8 / mathCad.tau / 5;
+            chartE1.ChartAreas[0].AxisX.MajorGrid.Interval = 8 / mathCad.tau / 5;
             ChartDrawer.drawChart(this.chartE1, mathCad.razdel1E1, M, 0);
             addCaption(chartE1, "E1", "f", M);
 
+            chartO1.ChartAreas[0].AxisX.Minimum = -8 / mathCad.tau;
+            chartO1.ChartAreas[0].AxisX.Maximum = 8 / mathCad.tau;
+            chartO1.ChartAreas[0].AxisX.Interval = 8 / mathCad.tau / 5;
+            chartO1.ChartAreas[0].AxisX.MajorGrid.Interval = 8 / mathCad.tau / 5;
             ChartDrawer.drawChart(this.chartO1, mathCad.razdel1O1, M, 0);
             addCaption(chartO1, "O1", "f", M);
 

@@ -5,11 +5,11 @@ using System.Numerics;
 namespace Spectres
 {
     public class MathCad {
-        private double A = 2;
-        private int K = 8;
+        public double A = 2;
+        public int K = 8;
         public double tau = 2e-6;
         private double F;
-        private int[] M = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 };
+        //private int[] M = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 };
         private List<double> f;
         private double T1;
         private List<double> t;
@@ -23,7 +23,7 @@ namespace Spectres
             F = K / tau;
             f = new List<double>();
 
-            for (double fValue = -F; fValue <= F; fValue += 0.0001 * F)
+            for (double fValue = -F; fValue <= F; fValue += 0.00001 * F)
             {
                 f.Add(fValue);
             }
@@ -51,7 +51,7 @@ namespace Spectres
 
             foreach(double tElement in t)
             {
-                result.Add(new FunctionPoint(U1(tElement, MParam), tElement)); // Здесь М = 1 потому что хрен знает что делать с М
+                result.Add(new FunctionPoint(U1(tElement, MParam), tElement));
             }
 
             return result;
@@ -214,7 +214,7 @@ namespace Spectres
         {
             t = new List<double>();
 
-            for (double tValue = -T1; tValue <= T1; tValue += 0.001 * T1)
+            for (double tValue = -T1; tValue <= T1; tValue += 0.0001 * T1)
             {
                 t.Add(tValue);
             }

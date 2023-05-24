@@ -34,7 +34,8 @@ namespace Spectres
         {
             if (
                 tb1M1.Text == tb1M2.Text || tb1M1.Text == tb1M3.Text || tb1M2.Text == tb1M3.Text
-                || !double.TryParse(tb1M1.Text, out M[0]) || !double.TryParse(tb1M2.Text, out M[1]) || !double.TryParse(tb1M3.Text, out M[2]) || !double.TryParse(tb2M.Text, out m) || !int.TryParse(tb2N.Text, out N)
+                || !double.TryParse(tb1M1.Text, out M[0]) || !double.TryParse(tb1M2.Text, out M[1]) || !double.TryParse(tb1M3.Text, out M[2]) || !double.TryParse(tb2M.Text, out m) || !int.TryParse(tb2N.Text, out N) ||
+                    !double.TryParse(tbParamA.Text, out mathCad.A) || !double.TryParse(tbParamTau.Text, out mathCad.tau) || !int.TryParse(tbParamK.Text, out mathCad.K)
                 )
             {
                 MessageBox.Show("Проверьте введённые данные");
