@@ -13,10 +13,10 @@ namespace Spectres
 {
     public partial class FormRazdel1 : Form
     {
-        private int[] M;
+        private double[] M;
         private MathCad mathCad;
 
-        public FormRazdel1(MathCad mathCad, int [] M, int N)
+        public FormRazdel1(MathCad mathCad, double [] M, int N)
         {
             this.M = M;
             this.mathCad = mathCad;
@@ -60,22 +60,22 @@ namespace Spectres
         }
         private void increaseM()
         {
-            M[0]+=3;
-            M[1]+=3;
-            M[2]+=3;
+            M[0]+=1.5;
+            M[1]+=1.5;
+            M[2]+=1.5;
         }
 
         private void decreaseM()
         {
-            M[0]-=3;
-            M[1]-=3;
-            M[2]-=3;
+            M[0]-=1.5;
+            M[1]-=1.5;
+            M[2]-=1.5;
         }
 
-        private void addCaption(Chart chart, string name, string parameter, int [] M)
+        private void addCaption(Chart chart, string name, string parameter, double [] M)
         {
             int i = 0;
-            foreach(int m in M)
+            foreach(double m in M)
             {
                 chart.Series[i].Name = name + "(" + parameter + "," + m + ")";
                 i++;

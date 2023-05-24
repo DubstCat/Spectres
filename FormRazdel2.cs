@@ -14,7 +14,7 @@ namespace Spectres
     {
 
         private MathCad mathCad;
-        public FormRazdel2(MathCad mathCad, int[] M, int N)
+        public FormRazdel2(MathCad mathCad, double[] M, int N)
         {
             this.mathCad = mathCad;
             InitializeComponent();

@@ -15,7 +15,7 @@ namespace Spectres
         private List<double> t;
         private List<double> f0;
         private double T;
-        // private int N = 0;
+       
 
 
         public MathCad()
@@ -41,7 +41,7 @@ namespace Spectres
 
         // Раздел 1
 
-        public List<FunctionPoint> razdel1U1(int MParam, int N)
+        public List<FunctionPoint> razdel1U1(double MParam, int N)
         {
             T1 = tau;
 
@@ -57,7 +57,7 @@ namespace Spectres
             return result;
         }
 
-        private double U1(double tParam, int MParam)
+        private double U1(double tParam, double MParam)
         {
             if (tParam < -tau / 2 || tParam > tau / 2)
             {
@@ -68,7 +68,7 @@ namespace Spectres
         }
 
 
-        private double C1(double fParam, int MParam)
+        private double C1(double fParam, double MParam)
         {
 
             if (fParam != 0 && fParam != MParam/(4*tau) && fParam!= -MParam/(4*tau))
@@ -92,12 +92,12 @@ namespace Spectres
             return 0;
         }
 
-        private double S1(double fParam, int MParam) {
+        private double S1(double fParam, double MParam) {
             return C1(fParam, MParam);
         }
 
 
-        public List<FunctionPoint> razdel1E1(int MParam, int NParam)
+        public List<FunctionPoint> razdel1E1(double MParam, int NParam)
         {
             T1 = tau;
 
@@ -113,12 +113,12 @@ namespace Spectres
         }
 
         
-        private double E1(double fParam, int MParam)
+        private double E1(double fParam, double MParam)
         {
             return Math.Abs(S1(fParam, MParam));
         }
 
-        public List<FunctionPoint> razdel1O1(int MParam, int NParam)
+        public List<FunctionPoint> razdel1O1(double MParam, int NParam)
         {
             List<FunctionPoint> result = new List<FunctionPoint>();
 
@@ -129,7 +129,7 @@ namespace Spectres
             return result;
         }
 
-        private double O1(double fParam, int MParam)
+        private double O1(double fParam, double MParam)
         {
             if(S1(fParam, MParam) < 0) 
             {
@@ -140,7 +140,7 @@ namespace Spectres
 
         // 2 раздел
 
-        public List<FunctionPoint> razdel2U2(int MParam, int NParam)
+        public List<FunctionPoint> razdel2U2(double MParam, int NParam)
         {
             T1 = (NParam + 1) * T;
 
@@ -154,7 +154,7 @@ namespace Spectres
             return result;
         }
 
-        private double U2(double tParam, int MParam, int NParam)
+        private double U2(double tParam, double MParam, int NParam)
         {
             double summ = 0;
             for (int n = -NParam; n <= NParam; n++)
@@ -164,7 +164,7 @@ namespace Spectres
             return summ;
         }
 
-        private double S2(double fParam, int MParam, int NParam)
+        private double S2(double fParam, double MParam, int NParam)
         {
             double summ = 0;
             for (int n = -NParam; n <= NParam; n++)
@@ -184,7 +184,7 @@ namespace Spectres
             return result;
         }
 
-        public double E2(double fParam, int MParam, int NParam)
+        public double E2(double fParam, double MParam, int NParam)
         {
             return Math.Abs(S2(fParam, MParam, NParam));
         }

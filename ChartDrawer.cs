@@ -6,11 +6,11 @@ namespace Spectres
 {
     public static class ChartDrawer
     {
-        public static void drawChart(Chart chart, Func<int, int, List<FunctionPoint>> method, int[] M, int N)
+        public static void drawChart(Chart chart, Func<double, int, List<FunctionPoint>> method, double[] M, int N)
         {
             int index = 0;
 
-            foreach (int currentM in M)
+            foreach (double currentM in M)
             {
                 List<FunctionPoint> grafik = method.Invoke(currentM, N);
 
