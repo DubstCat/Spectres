@@ -13,7 +13,7 @@ namespace Spectres
         private List<double> f;
         private double T1;
         private List<double> t;
-        private List<double> f0;
+        //private List<double> f0;
         private double T;
        
 
@@ -30,11 +30,11 @@ namespace Spectres
 
 
 
-            f0 = new List<double>();
+            /*f0 = new List<double>();
             foreach (int element in M)
             {
                 f0.Add(element / (4 * tau));
-            }
+            }*/
 
             T = 5 * tau;
         }
@@ -169,9 +169,8 @@ namespace Spectres
             double summ = 0;
             for (int n = -NParam; n <= NParam; n++)
             {
-                double complexPart = Math.Cos(-2 * Math.PI * fParam * n * T);
+                double complexPart = Math.Cos(2 * Math.PI * fParam * n * T);
                 summ += S1(fParam, MParam) * complexPart;
-
             }
             return summ;
         }
