@@ -5,7 +5,7 @@ using System.Numerics;
 namespace Spectres
 {
     public class MathCad {
-        private int A = 2;
+        private double A = 2;
         private int K = 8;
         public double tau = 2e-6;
         private double F;
@@ -23,7 +23,7 @@ namespace Spectres
             F = K / tau;
             f = new List<double>();
 
-            for (double fValue = -F; fValue <= F; fValue += 0.0001 * F)
+            for (double fValue = -F; fValue <= F; fValue += 0.00001 * F)
             {
                 f.Add(fValue);
             }
@@ -169,12 +169,14 @@ namespace Spectres
             double summ = 0;
             for (int n = -NParam; n <= NParam; n++)
             {
-                summ += S1(fParam, MParam) * Math.Pow(0.99, (2 * fParam * n * T));
+                double complexPart = Math.Cos(-2 * Math.PI * fParam * n * T);
+                summ += S1(fParam, MParam) * complexPart;
+
             }
             return summ;
         }
 
-        public List<FunctionPoint> razdel2E2(int MParam, int NParam)
+        public List<FunctionPoint> razdel2E2(double MParam, int NParam)
         {
             List<FunctionPoint> result = new List<FunctionPoint>();
             foreach (double fElement in f)
@@ -189,7 +191,7 @@ namespace Spectres
             return Math.Abs(S2(fParam, MParam, NParam));
         }
 
-        public List<FunctionPoint> razdel2O2(int MParam, int NParam)
+        public List<FunctionPoint> razdel2O2(double MParam, int NParam)
         {
             List<FunctionPoint> result = new List<FunctionPoint>();
 
@@ -200,7 +202,7 @@ namespace Spectres
             return result;
         }
 
-        private double O2(double fParam, int MParam, int NParam)
+        private double O2(double fParam, double MParam, int NParam)
         {
             if (S2(fParam, MParam, NParam) < 0)
             {
