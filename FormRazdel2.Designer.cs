@@ -48,13 +48,13 @@ namespace Spectres
             // 
             // chartU2
             // 
-            this.chartU2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(254)))), ((int)(((byte)(129)))));
+            this.chartU2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(254)))), ((int)(((byte)(160)))));
             chartArea1.AxisX.MajorGrid.Interval = 0D;
             chartArea1.AxisX.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
             chartArea1.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
             chartArea1.AxisY.Maximum = 3D;
             chartArea1.AxisY.Minimum = -3D;
-            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(254)))), ((int)(((byte)(129)))));
+            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(254)))), ((int)(((byte)(160)))));
             chartArea1.Name = "ChartArea1";
             this.chartU2.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
@@ -65,6 +65,7 @@ namespace Spectres
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series1.Legend = "Legend1";
+            series1.MarkerSize = 3;
             series1.Name = "U2(t, 6)";
             this.chartU2.Series.Add(series1);
             this.chartU2.Size = new System.Drawing.Size(1248, 300);
@@ -73,7 +74,7 @@ namespace Spectres
             // 
             // chartE2
             // 
-            this.chartE2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(254)))), ((int)(((byte)(129)))));
+            this.chartE2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(254)))), ((int)(((byte)(160)))));
             chartArea2.AxisX.MajorGrid.Interval = 800000D;
             chartArea2.AxisX.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
             chartArea2.AxisX.Maximum = 4000000D;
@@ -81,7 +82,7 @@ namespace Spectres
             chartArea2.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
             chartArea2.AxisY.Maximum = 4E-05D;
             chartArea2.AxisY.Minimum = 0D;
-            chartArea2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(254)))), ((int)(((byte)(129)))));
+            chartArea2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(254)))), ((int)(((byte)(160)))));
             chartArea2.Name = "ChartArea1";
             this.chartE2.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
@@ -100,7 +101,7 @@ namespace Spectres
             // 
             // chartO2
             // 
-            this.chartO2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(254)))), ((int)(((byte)(129)))));
+            this.chartO2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(254)))), ((int)(((byte)(160)))));
             chartArea3.AxisX.MajorGrid.Interval = 800000D;
             chartArea3.AxisX.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
             chartArea3.AxisX.Maximum = 4000000D;
@@ -108,7 +109,7 @@ namespace Spectres
             chartArea3.AxisY.MajorGrid.LineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Dot;
             chartArea3.AxisY.Maximum = 3.5D;
             chartArea3.AxisY.Minimum = -3.5D;
-            chartArea3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(254)))), ((int)(((byte)(129)))));
+            chartArea3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(254)))), ((int)(((byte)(160)))));
             chartArea3.Name = "ChartArea1";
             this.chartO2.ChartAreas.Add(chartArea3);
             legend3.Name = "Legend1";
@@ -130,7 +131,7 @@ namespace Spectres
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(254)))), ((int)(((byte)(129)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(254)))), ((int)(((byte)(160)))));
             this.ClientSize = new System.Drawing.Size(1293, 820);
             this.Controls.Add(this.chartO2);
             this.Controls.Add(this.chartE2);

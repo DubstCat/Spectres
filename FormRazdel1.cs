@@ -49,17 +49,17 @@ namespace Spectres
             ChartDrawer.drawChart(this.chartU1, mathCad.razdel1U1, M, 0);
             addCaption(chartU1, "U1", "t", M);
 
-            chartE1.ChartAreas[0].AxisX.Minimum = -8/mathCad.tau;
-            chartE1.ChartAreas[0].AxisX.Maximum = 8/mathCad.tau;
-            chartE1.ChartAreas[0].AxisX.Interval = 8 / mathCad.tau / 5;
-            chartE1.ChartAreas[0].AxisX.MajorGrid.Interval = 8 / mathCad.tau / 5;
+            chartE1.ChartAreas[0].AxisX.Minimum = -4000000;
+            chartE1.ChartAreas[0].AxisX.Maximum = 4000000;
+            chartE1.ChartAreas[0].AxisX.Interval = 4000000 / 5;
+            chartE1.ChartAreas[0].AxisX.MajorGrid.Interval = 4000000 / 5;
             ChartDrawer.drawChart(this.chartE1, mathCad.razdel1E1, M, 0);
             addCaption(chartE1, "E1", "f", M);
 
-            chartO1.ChartAreas[0].AxisX.Minimum = -8 / mathCad.tau;
-            chartO1.ChartAreas[0].AxisX.Maximum = 8 / mathCad.tau;
-            chartO1.ChartAreas[0].AxisX.Interval = 8 / mathCad.tau / 5;
-            chartO1.ChartAreas[0].AxisX.MajorGrid.Interval = 8 / mathCad.tau / 5;
+            chartO1.ChartAreas[0].AxisX.Minimum = -4000000;
+            chartO1.ChartAreas[0].AxisX.Maximum = 4000000;
+            chartO1.ChartAreas[0].AxisX.Interval = 4000000 / 5;
+            chartO1.ChartAreas[0].AxisX.MajorGrid.Interval = 4000000 / 5;
             ChartDrawer.drawChart(this.chartO1, mathCad.razdel1O1, M, 0);
             addCaption(chartO1, "O1", "f", M);
 
