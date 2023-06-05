@@ -23,7 +23,7 @@ namespace Spectres
             F = K / tau;
             f = new List<double>();
 
-            for (double fValue = -F; fValue <= F; fValue += 0.00001 * F)
+            for (double fValue = -F; fValue <= F; fValue += 0.0001 * F)
             {
                 f.Add(fValue);
             }
